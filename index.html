@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Chá Revelação</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* envelope */
+#envelope {
+  width: 250px;
+  cursor: pointer;
+}
+
+/* votação */
+#conteudo {
+  display: none;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+h2 {
+  color: #ff69b4;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ENVELOPE -->
+<img src="envelope2.png" id="envelope" onclick="abrir()">
+
+<!-- VOTAÇÃO -->
+<div id="conteudo">
+  <h2>Você foi convidado(a) para o chá revelação de Nicole Gabrielly 💖</h2>
+
+  <br>
+
+  <label>
+    <input type="radio" name="voto">
+    Menino Yuri Henrique
+  </label>
+
+  <br><br>
+
+  <label>
+    <input type="radio" name="voto">
+    Menina Alana Sofia
+  </label>
+</div>
+
+<script>
+function abrir() {
+  // some o envelope
+  document.getElementById("envelope").style.display = "none";
+
+  // mostra só a votação
+  document.getElementById("conteudo").style.display = "block";
+}
+</script>
+
+</body>
+</html>
